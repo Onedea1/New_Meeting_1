@@ -13,7 +13,8 @@ class _CartegoryButtonState extends State<CartegoryButton> {
   bool _isPressed4 = false;
   String _moim = "모임종류";
   String _cartegory = "카테고리";
-  String _cartegoryImage = 'assets/images/_Cartegory01.png';
+  String _cartegoryImage = 'assets/images/_Cartegory14.png';
+
   //none은 안되고 'assets/images/_Cartegory01.png'이런 주소는 됨
   //없는 것 처럼 보이는 이미지로 넣어야될듯
 
@@ -64,9 +65,9 @@ class _CartegoryButtonState extends State<CartegoryButton> {
             ),
             SizedBox(
               height: 36,
-              width: 81,
-              // child: ElevatedButton.icon(
-              child: ElevatedButton(
+              width: _isPressed4 ? 120 : 85,
+              child: ElevatedButton.icon(
+                // child: ElevatedButton(
                 onPressed: () {
                   setState(() {
                     _isPressed1 = false;
@@ -75,11 +76,12 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                     _cartegory = "카테고리";
                   });
                 },
-                // icon: Image.asset(
-                //   _cartegoryImage,
-                //   width: 24,
-                // ),
-                child: Text(
+                icon: Image.asset(
+                  _cartegoryImage,
+                  width: _isPressed4 ? 24 : 0,
+                ),
+                // child: Text(
+                label: Text(
                   _cartegory,
                   style: TextStyle(
                     height: 1.42,
@@ -271,12 +273,14 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                     width: 110,
                     height: 40,
                     child: ElevatedButton.icon(
-                      onPressed: () {setState(() {
-                        _isPressed1 = false;
-                        _isPressed2 = false;
-                        _isPressed4 = true;
-                        _cartegory = "문화활동";
-                      });},
+                      onPressed: () {
+                        setState(() {
+                          _isPressed1 = false;
+                          _isPressed2 = false;
+                          _isPressed4 = true;
+                          _cartegory = "문화활동";
+                        });
+                      },
                       icon: Image.asset(
                         'assets/images/_Cartegory03.png',
                         width: 24,
@@ -312,12 +316,14 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                     width: 89,
                     height: 40,
                     child: ElevatedButton.icon(
-                      onPressed: () {setState(() {
-                        _isPressed1 = false;
-                        _isPressed2 = false;
-                        _isPressed4 = true;
-                        _cartegory = "음악";
-                      });},
+                      onPressed: () {
+                        setState(() {
+                          _isPressed1 = false;
+                          _isPressed2 = false;
+                          _isPressed4 = true;
+                          _cartegory = "음악";
+                        });
+                      },
                       icon: Image.asset(
                         'assets/images/_Cartegory04.png',
                         width: 24,
@@ -382,12 +388,14 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                     width: 110,
                     height: 40,
                     child: ElevatedButton.icon(
-                      onPressed: () {setState(() {
-                        _isPressed1 = false;
-                        _isPressed2 = false;
-                        _isPressed4 = true;
-                        _cartegory = "봉사활동";
-                      });},
+                      onPressed: () {
+                        setState(() {
+                          _isPressed1 = false;
+                          _isPressed2 = false;
+                          _isPressed4 = true;
+                          _cartegory = "봉사활동";
+                        });
+                      },
                       icon: Image.asset(
                         'assets/images/_Cartegory06.png',
                         width: 24,
@@ -423,12 +431,14 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                     width: 89,
                     height: 40,
                     child: ElevatedButton.icon(
-                      onPressed: () {setState(() {
-                        _isPressed1 = false;
-                        _isPressed2 = false;
-                        _isPressed4 = true;
-                        _cartegory = "운동";
-                      });},
+                      onPressed: () {
+                        setState(() {
+                          _isPressed1 = false;
+                          _isPressed2 = false;
+                          _isPressed4 = true;
+                          _cartegory = "운동";
+                        });
+                      },
                       icon: Image.asset(
                         'assets/images/_Cartegory07.png',
                         width: 24,
@@ -457,12 +467,14 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                     width: 110,
                     height: 40,
                     child: ElevatedButton.icon(
-                      onPressed: () {setState(() {
-                        _isPressed1 = false;
-                        _isPressed2 = false;
-                        _isPressed4 = true;
-                        _cartegory = "반려동물";
-                      });},
+                      onPressed: () {
+                        setState(() {
+                          _isPressed1 = false;
+                          _isPressed2 = false;
+                          _isPressed4 = true;
+                          _cartegory = "반려동물";
+                        });
+                      },
                       icon: Image.asset(
                         'assets/images/_Cartegory08.png',
                         width: 24,
@@ -491,12 +503,14 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                     width: 89,
                     height: 40,
                     child: ElevatedButton.icon(
-                      onPressed: () {setState(() {
-                        _isPressed1 = false;
-                        _isPressed2 = false;
-                        _isPressed4 = true;
-                        _cartegory = "사교";
-                      });},
+                      onPressed: () {
+                        setState(() {
+                          _isPressed1 = false;
+                          _isPressed2 = false;
+                          _isPressed4 = true;
+                          _cartegory = "사교";
+                        });
+                      },
                       icon: Image.asset(
                         'assets/images/_Cartegory09.png',
                         width: 24,
@@ -532,12 +546,14 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                     width: 89,
                     height: 40,
                     child: ElevatedButton.icon(
-                      onPressed: () {setState(() {
-                        _isPressed1 = false;
-                        _isPressed2 = false;
-                        _isPressed4 = true;
-                        _cartegory = "수업";
-                      });},
+                      onPressed: () {
+                        setState(() {
+                          _isPressed1 = false;
+                          _isPressed2 = false;
+                          _isPressed4 = true;
+                          _cartegory = "수업";
+                        });
+                      },
                       icon: Image.asset(
                         'assets/images/_Cartegory10.png',
                         width: 24,
@@ -602,12 +618,14 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                     width: 89,
                     height: 40,
                     child: ElevatedButton.icon(
-                      onPressed: () {setState(() {
-                        _isPressed1 = false;
-                        _isPressed2 = false;
-                        _isPressed4 = true;
-                        _cartegory = "맛집";
-                      });},
+                      onPressed: () {
+                        setState(() {
+                          _isPressed1 = false;
+                          _isPressed2 = false;
+                          _isPressed4 = true;
+                          _cartegory = "맛집";
+                        });
+                      },
                       icon: Image.asset(
                         'assets/images/_Cartegory12.png',
                         width: 24,
@@ -643,12 +661,14 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                     width: 89,
                     height: 40,
                     child: ElevatedButton.icon(
-                      onPressed: () {setState(() {
-                        _isPressed1 = false;
-                        _isPressed2 = false;
-                        _isPressed4 = true;
-                        _cartegory = "요리";
-                      });},
+                      onPressed: () {
+                        setState(() {
+                          _isPressed1 = false;
+                          _isPressed2 = false;
+                          _isPressed4 = true;
+                          _cartegory = "요리";
+                        });
+                      },
                       icon: Image.asset(
                         'assets/images/_Cartegory13.png',
                         width: 24,
@@ -677,12 +697,14 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                     width: 89,
                     height: 40,
                     child: ElevatedButton.icon(
-                      onPressed: () {setState(() {
-                        _isPressed1 = false;
-                        _isPressed2 = false;
-                        _isPressed4 = true;
-                        _cartegory = "금융";
-                      });},
+                      onPressed: () {
+                        setState(() {
+                          _isPressed1 = false;
+                          _isPressed2 = false;
+                          _isPressed4 = true;
+                          _cartegory = "금융";
+                        });
+                      },
                       icon: Image.asset(
                         'assets/images/_Cartegory14.png',
                         width: 24,
@@ -710,7 +732,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                 ],
               ),
             ],
-          )
+          ),
       ],
     );
   }

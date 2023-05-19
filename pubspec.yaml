@@ -79,6 +79,7 @@ flutter:
     - assets/images/_Cartegory12.png
     - assets/images/_Cartegory13.png
     - assets/images/_Cartegory14.png
+    - assets/images/none_Space.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
