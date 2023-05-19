@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:new_meeting_page/const/colors.dart';
 
+
+
 class CartegoryButton extends StatefulWidget {
+  const CartegoryButton({Key? key}) : super(key: key);
   @override
   State<CartegoryButton> createState() => _CartegoryButtonState();
 }
@@ -13,16 +16,17 @@ class _CartegoryButtonState extends State<CartegoryButton> {
   bool _isPressed4 = false;
   String _moim = "모임종류";
   String _cartegory = "카테고리";
-  String _cartegoryImage = 'assets/images/_Cartegory14.png';
+  final _cartegoryImage = 'assets/images/_Cartegory14.png';
   double _cartegorysize = 85;
+  final _grey = MIXIN_BLACK_4; //MIXIN_BLACK_5의 색이 잘 안보여서 임시대체
 
   //none은 안되고 'assets/images/_Cartegory01.png'이런 주소는 됨
   //없는 것 처럼 보이는 이미지로 넣어야될듯
 
   @override
   Widget build(BuildContext context) {
-    Color _moimcolor = _isPressed1 ? MIXIN_2 : MIXIN_BLACK_4;
-    Color _cartegorycolor = _isPressed2 ? MIXIN_2 : MIXIN_BLACK_4;
+    Color moimcolor = _isPressed1 ? MIXIN_2 : MIXIN_BLACK_4;
+    Color cartegorycolor = _isPressed2 ? MIXIN_2 : MIXIN_BLACK_4;
 
     return Column(
       children: [
@@ -45,16 +49,16 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                   style: TextStyle(
                     height: 1.42,
                     fontSize: 14,
-                    color: _isPressed3 ? MIXIN_2 : _moimcolor,
+                    color: _isPressed3 ? MIXIN_2 : moimcolor,
                     fontFamily: 'SUIT',
                     fontWeight: FontWeight.w500,
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
                   side: BorderSide(
-                    color: _isPressed3 ? MIXIN_ : _moimcolor,
+                    color: _isPressed3 ? MIXIN_ : moimcolor,
                   ),
-                  backgroundColor: _isPressed3 ? MIXIN_ : Color(0xFFF2F2F2),
+                  backgroundColor: _isPressed3 ? MIXIN_ : const Color(0xFFF2F2F2),
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18),
@@ -62,7 +66,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 12,
             ),
             SizedBox(
@@ -89,17 +93,17 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                   style: TextStyle(
                     height: 1.42,
                     fontSize: 14,
-                    color: _isPressed4 ? BLACK : _cartegorycolor,
+                    color: _isPressed4 ? BLACK : cartegorycolor,
                     fontFamily: 'SUIT',
                     fontWeight: FontWeight.w500,
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: _isPressed4 ? MIXIN_BLACK_5 : Color(0xFFF2F2F2),
+                  backgroundColor: _isPressed4 ? _grey : const Color(0xFFF2F2F2),
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     side: BorderSide(
-                      color: _isPressed4 ? MIXIN_BLACK_5 : _cartegorycolor,
+                      color: _isPressed4 ? _grey : cartegorycolor,
                       width: 1.0,
                     ),
                     borderRadius: BorderRadius.circular(18),
@@ -123,7 +127,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                         _moim = "동아리";
                       });
                     },
-                    child: Text(
+                    child: const Text(
                       '동아리',
                       style: TextStyle(
                           fontSize: 14,
@@ -141,7 +145,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                         _moim = "번개";
                       });
                     },
-                    child: Text(
+                    child: const Text(
                       '번개',
                       style: TextStyle(
                           fontSize: 14,
@@ -159,7 +163,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                         _moim = "스터디";
                       });
                     },
-                    child: Text(
+                    child: const Text(
                       '스터디',
                       style: TextStyle(
                           fontSize: 14,
@@ -177,7 +181,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                         _moim = "프로젝트";
                       });
                     },
-                    child: Text(
+                    child: const Text(
                       '프로젝트',
                       style: TextStyle(
                           fontSize: 14,
@@ -188,9 +192,11 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                   ),
                 ],
               ),
+              Divider(thickness: 1,height: 1,color: _grey),
+
             ],
           ),
-        SizedBox(
+        const SizedBox(
           height: 12,
         ),
         if (_isPressed2)
@@ -217,7 +223,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                         'assets/images/_Cartegory01.png',
                         width: 24,
                       ),
-                      label: Text(
+                      label: const Text(
                         'IT/개발',
                         style: TextStyle(
                             color: MIXIN_BLACK_1,
@@ -226,19 +232,20 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                             fontWeight: FontWeight.w500),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: MIXIN_BLACK_5,
+                        backgroundColor: _grey,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            color: MIXIN_BLACK_5,
+                          side: BorderSide(
+                            color: _grey,
                           ),
                           borderRadius: BorderRadius.circular(36),
                         ),
                       ),
                     ),
                   ),
+                  SizedBox(width: 8,),
                   SizedBox(
-                    width: 100,
+                    width: 97,
                     height: 40,
                     child: ElevatedButton.icon(
                       onPressed: () {
@@ -255,7 +262,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                         'assets/images/_Cartegory02.png',
                         width: 24,
                       ),
-                      label: Text(
+                      label: const Text(
                         '디자인',
                         style: TextStyle(
                             color: MIXIN_BLACK_1,
@@ -264,17 +271,18 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                             fontWeight: FontWeight.w500),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: MIXIN_BLACK_5,
+                        backgroundColor: _grey,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            color: MIXIN_BLACK_5,
+                          side: BorderSide(
+                            color: _grey,
                           ),
                           borderRadius: BorderRadius.circular(36),
                         ),
                       ),
                     ),
                   ),
+                  SizedBox(width: 8,),
                   SizedBox(
                     width: 110,
                     height: 40,
@@ -292,7 +300,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                         'assets/images/_Cartegory03.png',
                         width: 24,
                       ),
-                      label: Text(
+                      label: const Text(
                         '문화활동',
                         style: TextStyle(
                             color: MIXIN_BLACK_1,
@@ -301,11 +309,11 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                             fontWeight: FontWeight.w500),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: MIXIN_BLACK_5,
+                        backgroundColor: _grey,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            color: MIXIN_BLACK_5,
+                          side: BorderSide(
+                            color: _grey,
                           ),
                           borderRadius: BorderRadius.circular(36),
                         ),
@@ -314,7 +322,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
               Row(
@@ -336,7 +344,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                         'assets/images/_Cartegory04.png',
                         width: 24,
                       ),
-                      label: Text(
+                      label: const Text(
                         '음악',
                         style: TextStyle(
                             color: MIXIN_BLACK_1,
@@ -345,17 +353,18 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                             fontWeight: FontWeight.w500),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: MIXIN_BLACK_5,
+                        backgroundColor: _grey,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            color: MIXIN_BLACK_5,
+                          side: BorderSide(
+                            color: _grey,
                           ),
                           borderRadius: BorderRadius.circular(36),
                         ),
                       ),
                     ),
                   ),
+                  SizedBox(width: 8,),
                   SizedBox(
                     width: 89,
                     height: 40,
@@ -382,17 +391,18 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                             fontWeight: FontWeight.w500),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: MIXIN_BLACK_5,
+                        backgroundColor: _grey,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            color: MIXIN_BLACK_5,
+                          side: BorderSide(
+                            color: _grey,
                           ),
                           borderRadius: BorderRadius.circular(36),
                         ),
                       ),
                     ),
                   ),
+                  SizedBox(width: 8,),
                   SizedBox(
                     width: 110,
                     height: 40,
@@ -410,7 +420,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                         'assets/images/_Cartegory06.png',
                         width: 24,
                       ),
-                      label: Text(
+                      label: const Text(
                         '봉사활동',
                         style: TextStyle(
                             color: MIXIN_BLACK_1,
@@ -419,11 +429,11 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                             fontWeight: FontWeight.w500),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: MIXIN_BLACK_5,
+                        backgroundColor: _grey,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            color: MIXIN_BLACK_5,
+                          side: BorderSide(
+                            color: _grey,
                           ),
                           borderRadius: BorderRadius.circular(36),
                         ),
@@ -432,7 +442,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
               Row(
@@ -454,7 +464,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                         'assets/images/_Cartegory07.png',
                         width: 24,
                       ),
-                      label: Text(
+                      label: const Text(
                         '운동',
                         style: TextStyle(
                             color: MIXIN_BLACK_1,
@@ -463,17 +473,18 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                             fontWeight: FontWeight.w500),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: MIXIN_BLACK_5,
+                        backgroundColor: _grey,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            color: MIXIN_BLACK_5,
+                          side: BorderSide(
+                            color: _grey,
                           ),
                           borderRadius: BorderRadius.circular(36),
                         ),
                       ),
                     ),
                   ),
+                  SizedBox(width: 8,),
                   SizedBox(
                     width: 110,
                     height: 40,
@@ -500,17 +511,18 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                             fontWeight: FontWeight.w500),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: MIXIN_BLACK_5,
+                        backgroundColor: _grey,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            color: MIXIN_BLACK_5,
+                          side: BorderSide(
+                            color: _grey,
                           ),
                           borderRadius: BorderRadius.circular(36),
                         ),
                       ),
                     ),
                   ),
+                  SizedBox(width: 8,),
                   SizedBox(
                     width: 89,
                     height: 40,
@@ -537,11 +549,11 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                             fontWeight: FontWeight.w500),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: MIXIN_BLACK_5,
+                        backgroundColor: _grey,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            color: MIXIN_BLACK_5,
+                          side: BorderSide(
+                            color: _grey,
                           ),
                           borderRadius: BorderRadius.circular(36),
                         ),
@@ -550,7 +562,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
               Row(
@@ -581,17 +593,18 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                             fontWeight: FontWeight.w500),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: MIXIN_BLACK_5,
+                        backgroundColor: _grey,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            color: MIXIN_BLACK_5,
+                          side: BorderSide(
+                            color: _grey,
                           ),
                           borderRadius: BorderRadius.circular(36),
                         ),
                       ),
                     ),
                   ),
+                  SizedBox(width: 8,),
                   SizedBox(
                     width: 100,
                     height: 40,
@@ -618,17 +631,18 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                             fontWeight: FontWeight.w500),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: MIXIN_BLACK_5,
+                        backgroundColor: _grey,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            color: MIXIN_BLACK_5,
+                          side: BorderSide(
+                            color: _grey,
                           ),
                           borderRadius: BorderRadius.circular(36),
                         ),
                       ),
                     ),
                   ),
+                  SizedBox(width: 8,),
                   SizedBox(
                     width: 89,
                     height: 40,
@@ -655,11 +669,11 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                             fontWeight: FontWeight.w500),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: MIXIN_BLACK_5,
+                        backgroundColor: _grey,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            color: MIXIN_BLACK_5,
+                          side: BorderSide(
+                            color: _grey,
                           ),
                           borderRadius: BorderRadius.circular(36),
                         ),
@@ -668,7 +682,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
               Row(
@@ -699,17 +713,18 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                             fontWeight: FontWeight.w500),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: MIXIN_BLACK_5,
+                        backgroundColor: _grey,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            color: MIXIN_BLACK_5,
+                          side: BorderSide(
+                            color: _grey,
                           ),
                           borderRadius: BorderRadius.circular(36),
                         ),
                       ),
                     ),
                   ),
+                  SizedBox(width: 8,),
                   SizedBox(
                     width: 89,
                     height: 40,
@@ -736,11 +751,11 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                             fontWeight: FontWeight.w500),
                       ),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: MIXIN_BLACK_5,
+                        backgroundColor: _grey,
                         elevation: 0,
                         shape: RoundedRectangleBorder(
-                          side: const BorderSide(
-                            color: MIXIN_BLACK_5,
+                          side: BorderSide(
+                            color: _grey,
                           ),
                           borderRadius: BorderRadius.circular(36),
                         ),
@@ -749,6 +764,9 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                   ),
                 ],
               ),
+              SizedBox(height: 16,),
+              Divider(thickness: 1,height: 1,color: _grey),
+
             ],
           ),
       ],

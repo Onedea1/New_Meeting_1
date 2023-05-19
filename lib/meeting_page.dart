@@ -11,6 +11,7 @@ class MeetingPage extends StatefulWidget {
 class _MeetingPageState extends State<MeetingPage> {
   final int maxLength = 500;
   String textValue = "";
+  Color _grey = MIXIN_BLACK_4; //MIXIN_BLACK_5의 색이 잘 안보여서 임시대체
 
   @override
   Widget build(BuildContext context) {
@@ -39,86 +40,95 @@ class _MeetingPageState extends State<MeetingPage> {
       ),
       body: SingleChildScrollView(
         child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(24, 25, 24, 0),
-            child: Column(
-              children: [
-                SizedBox(
-                  // height: 761,
-                  height: 630,
-                  child: Column(
-                    children: [
-                      Container(
-                        child: TextField(
-                          decoration: InputDecoration(
-                            hintText: '모임명을 작성해주세요',
-                            hintStyle: TextStyle(
+          child: Column(
+            children: [
+              SizedBox(
+                height: 25,
+              ),
+              SizedBox(
+                // height: 761,
+                height: 450,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(24, 0, 24, 0),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        Container(
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: '모임명을 작성해주세요',
+                              hintStyle: TextStyle(
+                                fontSize: 24,
+                                fontFamily: 'SUIT',
+                                fontWeight: FontWeight.w600,
+                                color: MIXIN_BLACK_4,
+                              ),
+                              counterStyle: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                fontFamily: 'SUIT',
+                                color: Color(0xFFCED0D5),
+                              ),
+                              border: InputBorder.none,
+                              counterText: '',
+                            ),
+                            style: TextStyle(
                               fontSize: 24,
                               fontFamily: 'SUIT',
                               fontWeight: FontWeight.w600,
-                              color: Color(0xFFCED0D5),
                             ),
-                            counterStyle: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500,
-                              fontFamily: 'SUIT',
-                              color: Color(0xFFCED0D5),
-                            ),
-                            border: InputBorder.none,
-                            counterText: '',
+                            maxLength: 25,
                           ),
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontFamily: 'SUIT',
-                            fontWeight: FontWeight.w600,
-                          ),
-                          maxLength: 25,
                         ),
-                      ),
-                      SizedBox(height: 10,),
-                      //카테고리 버튼
-                      CartegoryButton(),
-                      SizedBox(height: 20),
-                      Container(
-                        child: TextField(
-                          decoration: InputDecoration(
-                            hintText: "모임에 대한 정보를 입력해주세요.",
-                            hintStyle: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
-                              fontFamily: 'SUIT',
-                              color: Color(0xFFCED0D5),
-                            ),
-                            counterStyle: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500,
-                              fontFamily: 'SUIT',
-                              color: Color(0xFFCED0D5),
-                            ),
-                            border: InputBorder.none,
-                          ),
-                          maxLength: maxLength,
-                          maxLines: null,
+                        SizedBox(
+                          height: 10,
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-                ElevatedButton(
-                  child: Text('다음'),
-                  style: TextButton.styleFrom(
-                    fixedSize: Size(342, 56),
-                    elevation: 0,
-                    backgroundColor: MIXIN_BLACK_4,
-                    foregroundColor: Color(0xFFFFFFFF),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
+                        //카테고리 버튼
+                        CartegoryButton(),
+                        SizedBox(height: 20),
+                        Container(
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: "모임에 대한 정보를 입력해주세요.",
+                              hintStyle: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w500,
+                                fontFamily: 'SUIT',
+                                color: MIXIN_BLACK_4,
+                              ),
+                              counterStyle: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                fontFamily: 'SUIT',
+                                color: Color(0xFFCED0D5),
+                              ),
+                              border: InputBorder.none,
+                            ),
+                            maxLength: maxLength,
+                            maxLines: null,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  onPressed: () {},
                 ),
-              ],
-            ),
+              ),
+              Divider(thickness: 8, height: 8, color: _grey),
+              SizedBox(height: 150,),
+              ElevatedButton(
+                child: Text('다음'),
+                style: TextButton.styleFrom(
+                  fixedSize: Size(342, 56),
+                  elevation: 0,
+                  backgroundColor: MIXIN_BLACK_4,
+                  foregroundColor: Color(0xFFFFFFFF),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+                onPressed: () {},
+              ),
+            ],
           ),
         ),
       ),
