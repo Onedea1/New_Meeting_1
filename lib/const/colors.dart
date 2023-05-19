@@ -12,6 +12,7 @@ const MIXIN_BLACK_4 = Color(0xFFCED0D5);
 
 const MIXIN_BLACK_5 = Color(0xFFF2F3F7);
 
+
 const MIXIN_CLICK = Color(0xFFB6DDD6);
 
 const WHITE = Color(0xFFFFFFFF);

@@ -14,6 +14,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
   String _moim = "모임종류";
   String _cartegory = "카테고리";
   String _cartegoryImage = 'assets/images/_Cartegory14.png';
+  double _cartegorysize = 85;
 
   //none은 안되고 'assets/images/_Cartegory01.png'이런 주소는 됨
   //없는 것 처럼 보이는 이미지로 넣어야될듯
@@ -22,6 +23,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
   Widget build(BuildContext context) {
     Color _moimcolor = _isPressed1 ? MIXIN_2 : MIXIN_BLACK_4;
     Color _cartegorycolor = _isPressed2 ? MIXIN_2 : MIXIN_BLACK_4;
+
     return Column(
       children: [
         Row(
@@ -50,7 +52,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                 ),
                 style: ElevatedButton.styleFrom(
                   side: BorderSide(
-                    color: _isPressed3 ? MIXIN_2 : _moimcolor,
+                    color: _isPressed3 ? MIXIN_ : _moimcolor,
                   ),
                   backgroundColor: _isPressed3 ? MIXIN_ : Color(0xFFF2F2F2),
                   elevation: 0,
@@ -65,7 +67,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
             ),
             SizedBox(
               height: 36,
-              width: _isPressed4 ? 120 : 85,
+              width: _cartegorysize,
               child: ElevatedButton.icon(
                 // child: ElevatedButton(
                 onPressed: () {
@@ -74,6 +76,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                     _isPressed2 = !_isPressed2;
                     _isPressed4 = false;
                     _cartegory = "카테고리";
+                    _cartegorysize = 85;
                   });
                 },
                 icon: Image.asset(
@@ -86,17 +89,17 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                   style: TextStyle(
                     height: 1.42,
                     fontSize: 14,
-                    color: _isPressed4 ? MIXIN_2 : _cartegorycolor,
+                    color: _isPressed4 ? BLACK : _cartegorycolor,
                     fontFamily: 'SUIT',
                     fontWeight: FontWeight.w500,
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: _isPressed4 ? MIXIN_ : Color(0xFFF2F2F2),
+                  backgroundColor: _isPressed4 ? MIXIN_BLACK_5 : Color(0xFFF2F2F2),
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     side: BorderSide(
-                      color: _isPressed4 ? MIXIN_2 : _cartegorycolor,
+                      color: _isPressed4 ? MIXIN_BLACK_5 : _cartegorycolor,
                       width: 1.0,
                     ),
                     borderRadius: BorderRadius.circular(18),
@@ -207,6 +210,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed2 = false;
                           _isPressed4 = true;
                           _cartegory = "IT/개발";
+                          _cartegorysize = 110;
                         });
                       },
                       icon: Image.asset(
@@ -243,6 +247,8 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed2 = false;
                           _isPressed4 = true;
                           _cartegory = "디자인";
+                          _cartegorysize = 97;
+
                         });
                       },
                       icon: Image.asset(
@@ -279,6 +285,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed2 = false;
                           _isPressed4 = true;
                           _cartegory = "문화활동";
+                          _cartegorysize = 110;
                         });
                       },
                       icon: Image.asset(
@@ -322,6 +329,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed2 = false;
                           _isPressed4 = true;
                           _cartegory = "음악";
+                          _cartegorysize = 92;
                         });
                       },
                       icon: Image.asset(
@@ -358,6 +366,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed2 = false;
                           _isPressed4 = true;
                           _cartegory = "여행";
+                          _cartegorysize = 92;
                         });
                       },
                       icon: Image.asset(
@@ -394,6 +403,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed2 = false;
                           _isPressed4 = true;
                           _cartegory = "봉사활동";
+                          _cartegorysize = 110;
                         });
                       },
                       icon: Image.asset(
@@ -437,6 +447,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed2 = false;
                           _isPressed4 = true;
                           _cartegory = "운동";
+                          _cartegorysize = 92;
                         });
                       },
                       icon: Image.asset(
@@ -473,6 +484,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed2 = false;
                           _isPressed4 = true;
                           _cartegory = "반려동물";
+                          _cartegorysize = 110;
                         });
                       },
                       icon: Image.asset(
@@ -509,6 +521,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed2 = false;
                           _isPressed4 = true;
                           _cartegory = "사교";
+                          _cartegorysize = 92;
                         });
                       },
                       icon: Image.asset(
@@ -552,6 +565,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed2 = false;
                           _isPressed4 = true;
                           _cartegory = "수업";
+                          _cartegorysize = 92;
                         });
                       },
                       icon: Image.asset(
@@ -588,6 +602,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed2 = false;
                           _isPressed4 = true;
                           _cartegory = "외국어";
+                          _cartegorysize = 97;
                         });
                       },
                       icon: Image.asset(
@@ -624,6 +639,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed2 = false;
                           _isPressed4 = true;
                           _cartegory = "맛집";
+                          _cartegorysize = 92;
                         });
                       },
                       icon: Image.asset(
@@ -667,6 +683,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed2 = false;
                           _isPressed4 = true;
                           _cartegory = "요리";
+                          _cartegorysize = 92;
                         });
                       },
                       icon: Image.asset(
@@ -703,6 +720,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed2 = false;
                           _isPressed4 = true;
                           _cartegory = "금융";
+                          _cartegorysize = 92;
                         });
                       },
                       icon: Image.asset(
