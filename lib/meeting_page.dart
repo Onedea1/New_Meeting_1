@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_meeting_page/const/colors.dart';
-
+import 'package:percent_indicator/percent_indicator.dart';
 import 'cartegory_button.dart';
 
 class MeetingPage extends StatefulWidget {
@@ -114,9 +114,11 @@ class _MeetingPageState extends State<MeetingPage> {
                 ),
               ),
               Divider(thickness: 8, height: 8, color: _grey),
-              SizedBox(height: 150,),
+              SizedBox(
+                height: 149,
+              ),
               ElevatedButton(
-                child: Text('다음'),
+                child: Text('다음',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 18,fontFamily: 'SUIT'),),
                 style: TextButton.styleFrom(
                   fixedSize: Size(342, 56),
                   elevation: 0,

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:new_meeting_page/const/colors.dart';
 
-
-
 class CartegoryButton extends StatefulWidget {
   const CartegoryButton({Key? key}) : super(key: key);
+
   @override
   State<CartegoryButton> createState() => _CartegoryButtonState();
 }
@@ -58,7 +57,8 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                   side: BorderSide(
                     color: _isPressed3 ? MIXIN_ : moimcolor,
                   ),
-                  backgroundColor: _isPressed3 ? MIXIN_ : const Color(0xFFF2F2F2),
+                  backgroundColor:
+                      _isPressed3 ? MIXIN_ : const Color(0xFFF2F2F2),
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18),
@@ -99,7 +99,8 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: _isPressed4 ? _grey : const Color(0xFFF2F2F2),
+                  backgroundColor:
+                      _isPressed4 ? _grey : const Color(0xFFF2F2F2),
                   elevation: 0,
                   shape: RoundedRectangleBorder(
                     side: BorderSide(
@@ -192,8 +193,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                   ),
                 ],
               ),
-              Divider(thickness: 1,height: 1,color: _grey),
-
+              Divider(thickness: 1, height: 1, color: _grey),
             ],
           ),
         const SizedBox(
@@ -243,7 +243,9 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 8,),
+                  SizedBox(
+                    width: 8,
+                  ),
                   SizedBox(
                     width: 97,
                     height: 40,
@@ -255,7 +257,6 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed4 = true;
                           _cartegory = "디자인";
                           _cartegorysize = 97;
-
                         });
                       },
                       icon: Image.asset(
@@ -282,7 +283,9 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 8,),
+                  SizedBox(
+                    width: 8,
+                  ),
                   SizedBox(
                     width: 110,
                     height: 40,
@@ -364,7 +367,9 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 8,),
+                  SizedBox(
+                    width: 8,
+                  ),
                   SizedBox(
                     width: 89,
                     height: 40,
@@ -402,7 +407,9 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 8,),
+                  SizedBox(
+                    width: 8,
+                  ),
                   SizedBox(
                     width: 110,
                     height: 40,
@@ -484,7 +491,9 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 8,),
+                  SizedBox(
+                    width: 8,
+                  ),
                   SizedBox(
                     width: 110,
                     height: 40,
@@ -522,7 +531,9 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 8,),
+                  SizedBox(
+                    width: 8,
+                  ),
                   SizedBox(
                     width: 89,
                     height: 40,
@@ -604,7 +615,9 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 8,),
+                  SizedBox(
+                    width: 8,
+                  ),
                   SizedBox(
                     width: 100,
                     height: 40,
@@ -642,7 +655,9 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 8,),
+                  SizedBox(
+                    width: 8,
+                  ),
                   SizedBox(
                     width: 89,
                     height: 40,
@@ -724,7 +739,9 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                       ),
                     ),
                   ),
-                  SizedBox(width: 8,),
+                  SizedBox(
+                    width: 8,
+                  ),
                   SizedBox(
                     width: 89,
                     height: 40,
@@ -764,9 +781,10 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                   ),
                 ],
               ),
-              SizedBox(height: 16,),
-              Divider(thickness: 1,height: 1,color: _grey),
-
+              SizedBox(
+                height: 16,
+              ),
+              Divider(thickness: 1, height: 1, color: _grey),
             ],
           ),
       ],
