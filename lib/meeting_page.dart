@@ -3,6 +3,7 @@ import 'package:new_meeting_page/const/colors.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'cartegory_button.dart';
 
+
 class MeetingPage extends StatefulWidget {
   @override
   State<MeetingPage> createState() => _MeetingPageState();
@@ -12,7 +13,6 @@ class _MeetingPageState extends State<MeetingPage> {
   final int maxLength = 500;
   String textValue = "";
   Color _grey = MIXIN_BLACK_4; //MIXIN_BLACK_5의 색이 잘 안보여서 임시대체
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,76 +47,85 @@ class _MeetingPageState extends State<MeetingPage> {
               ),
               SizedBox(
                 // height: 761,
-                height: 450,
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(24, 0, 24, 0),
-                  child: SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        Container(
-                          child: TextField(
-                            decoration: InputDecoration(
-                              hintText: '모임명을 작성해주세요',
-                              hintStyle: TextStyle(
-                                fontSize: 24,
-                                fontFamily: 'SUIT',
-                                fontWeight: FontWeight.w600,
-                                color: MIXIN_BLACK_4,
+                height: 450+149,
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(24,0,24,0),
+                        child: Column(
+                          children: [
+                            Container(
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  hintText: '모임명을 작성해주세요',
+                                  hintStyle: TextStyle(
+                                    fontSize: 24,
+                                    fontFamily: 'SUIT',
+                                    fontWeight: FontWeight.w600,
+                                    color: MIXIN_BLACK_4,
+                                  ),
+                                  counterStyle: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: 'SUIT',
+                                    color: Color(0xFFCED0D5),
+                                  ),
+                                  border: InputBorder.none,
+                                  counterText: '',
+                                ),
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontFamily: 'SUIT',
+                                  fontWeight: FontWeight.w600,
+                                ),
+                                maxLength: 25,
                               ),
-                              counterStyle: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                                fontFamily: 'SUIT',
-                                color: Color(0xFFCED0D5),
-                              ),
-                              border: InputBorder.none,
-                              counterText: '',
                             ),
-                            style: TextStyle(
-                              fontSize: 24,
-                              fontFamily: 'SUIT',
-                              fontWeight: FontWeight.w600,
+                            SizedBox(
+                              height: 10,
                             ),
-                            maxLength: 25,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        //카테고리 버튼
-                        CartegoryButton(),
-                        SizedBox(height: 20),
-                        Container(
-                          child: TextField(
-                            decoration: InputDecoration(
-                              hintText: "모임에 대한 정보를 입력해주세요.",
-                              hintStyle: TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                fontFamily: 'SUIT',
-                                color: MIXIN_BLACK_4,
+                            //카테고리 버튼
+                            CartegoryButton(),
+                            SizedBox(height: 20),
+                            Container(
+                              child: TextField(
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: 'SUIT',
+                                  fontWeight: FontWeight.w500,
+                                ),
+                                decoration: InputDecoration(
+                                  hintText: "모임에 대한 정보를 입력해주세요.",
+                                  hintStyle: TextStyle(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: 'SUIT',
+                                    color: MIXIN_BLACK_4,
+                                  ),
+                                  counterStyle: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    fontFamily: 'SUIT',
+                                    color: Color(0xFFCED0D5),
+                                  ),
+                                  border: InputBorder.none,
+                                ),
+                                maxLength: maxLength,
+                                maxLines: null,
                               ),
-                              counterStyle: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                                fontFamily: 'SUIT',
-                                color: Color(0xFFCED0D5),
-                              ),
-                              border: InputBorder.none,
                             ),
-                            maxLength: maxLength,
-                            maxLines: null,
-                          ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                      SizedBox(height: 16,),
+                      Divider(thickness: 8, height: 8, color: _grey),
+
+                    ],
                   ),
                 ),
               ),
-              Divider(thickness: 8, height: 8, color: _grey),
-              SizedBox(
-                height: 149,
-              ),
+
               ElevatedButton(
                 child: Text('다음',style: TextStyle(fontWeight: FontWeight.w600,fontSize: 18,fontFamily: 'SUIT'),),
                 style: TextButton.styleFrom(
