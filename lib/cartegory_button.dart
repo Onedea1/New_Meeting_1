@@ -15,7 +15,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
   bool _isPressed4 = false;
   String _moim = "모임종류";
   String _cartegory = "카테고리";
-  final _cartegoryImage = 'assets/images/_Cartegory14.png';
+  String _cartegoryImage = 'assets/images/_Cartegory14.png';
   double _cartegorysize = 85;
   final _grey = MIXIN_BLACK_4; //MIXIN_BLACK_5의 색이 잘 안보여서 임시대체
 
@@ -217,6 +217,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed4 = true;
                           _cartegory = "IT/개발";
                           _cartegorysize = 110;
+                          _cartegoryImage = 'assets/images/_Cartegory01.png';
                         });
                       },
                       icon: Image.asset(
@@ -257,6 +258,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed4 = true;
                           _cartegory = "디자인";
                           _cartegorysize = 97;
+                          _cartegoryImage = 'assets/images/_Cartegory02.png';
                         });
                       },
                       icon: Image.asset(
@@ -297,6 +299,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed4 = true;
                           _cartegory = "문화활동";
                           _cartegorysize = 110;
+                          _cartegoryImage = 'assets/images/_Cartegory03.png';
                         });
                       },
                       icon: Image.asset(
@@ -341,6 +344,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed4 = true;
                           _cartegory = "음악";
                           _cartegorysize = 92;
+                          _cartegoryImage = 'assets/images/_Cartegory04.png';
                         });
                       },
                       icon: Image.asset(
@@ -381,6 +385,7 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed4 = true;
                           _cartegory = "여행";
                           _cartegorysize = 92;
+                          _cartegoryImage = 'assets/images/_Cartegory05.png';
                         });
                       },
                       icon: Image.asset(
@@ -421,6 +426,8 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed4 = true;
                           _cartegory = "봉사활동";
                           _cartegorysize = 110;
+                          _cartegoryImage = 'assets/images/_Cartegory06.png';
+
                         });
                       },
                       icon: Image.asset(
@@ -465,6 +472,8 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed4 = true;
                           _cartegory = "운동";
                           _cartegorysize = 92;
+                          _cartegoryImage = 'assets/images/_Cartegory07.png';
+
                         });
                       },
                       icon: Image.asset(
@@ -505,6 +514,8 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed4 = true;
                           _cartegory = "반려동물";
                           _cartegorysize = 110;
+                          _cartegoryImage = 'assets/images/_Cartegory08.png';
+
                         });
                       },
                       icon: Image.asset(
@@ -545,6 +556,8 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed4 = true;
                           _cartegory = "사교";
                           _cartegorysize = 92;
+                          _cartegoryImage = 'assets/images/_Cartegory09.png';
+
                         });
                       },
                       icon: Image.asset(
@@ -589,6 +602,8 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed4 = true;
                           _cartegory = "수업";
                           _cartegorysize = 92;
+                          _cartegoryImage = 'assets/images/_Cartegory10.png';
+
                         });
                       },
                       icon: Image.asset(
@@ -629,6 +644,8 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed4 = true;
                           _cartegory = "외국어";
                           _cartegorysize = 97;
+                          _cartegoryImage = 'assets/images/_Cartegory11.png';
+
                         });
                       },
                       icon: Image.asset(
@@ -669,6 +686,8 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed4 = true;
                           _cartegory = "맛집";
                           _cartegorysize = 92;
+                          _cartegoryImage = 'assets/images/_Cartegory12.png';
+
                         });
                       },
                       icon: Image.asset(
@@ -713,6 +732,8 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed4 = true;
                           _cartegory = "요리";
                           _cartegorysize = 92;
+                          _cartegoryImage = 'assets/images/_Cartegory13.png';
+
                         });
                       },
                       icon: Image.asset(
@@ -753,6 +774,8 @@ class _CartegoryButtonState extends State<CartegoryButton> {
                           _isPressed4 = true;
                           _cartegory = "금융";
                           _cartegorysize = 92;
+                          _cartegoryImage = 'assets/images/_Cartegory14.png';
+
                         });
                       },
                       icon: Image.asset(
